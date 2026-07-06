@@ -397,8 +397,6 @@ async function showDashboard(){
 
 function renderTripGrid(){
   const g=$('#tripGrid');g.innerHTML='';
-  // Create card
-  const cc=ce('div','create-card');cc.innerHTML='<div class="cc-icon">✈️</div>建立新旅程';cc.onclick=startWizard;g.appendChild(cc);
   // Trip cards
   trips.forEach(t=>{
     const c=ce('div','trip-card');
