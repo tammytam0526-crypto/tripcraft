@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
@@ -20,7 +19,7 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
 /* ---- buttons ---- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;border:none;border-radius:12px;font-family:inherit;font-weight:700;font-size:15px;padding:12px 24px;transition:transform .1s}
 .btn:active{transform:scale(.97)}
-.btn-primary{background:var(--red);color:#fff}
+.btn-primary{background:#5B3A28;color:#fff}
 .btn-dark{background:var(--ink);color:#fff}
 .btn-outline{background:transparent;border:1.5px solid var(--line);color:var(--ink)}
 .btn-gold{background:var(--gold);color:#fff}
@@ -36,20 +35,20 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-off
 #wizard{display:none;min-height:100vh}
 #generating{display:none;min-height:100vh;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px}
 #tripview{display:none;padding-bottom:96px}
-.land-top{background:linear-gradient(145deg,#12293F 0%,#1A3A5C 50%,#243B53 100%);color:#fff;padding:16px 22px 28px;text-align:center;position:relative;overflow:hidden;border-radius:0 0 24px 24px}
+.land-top{background:linear-gradient(145deg,#3C2415 0%,#5B3A28 50%,#4A2E1C 100%);color:#fff;padding:16px 22px 28px;text-align:center;position:relative;overflow:hidden;border-radius:0 0 24px 24px}
 .land-topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
-.land-brand{font-family:var(--mono);font-size:13px;letter-spacing:3px;color:#9BB4CC}
+.land-brand{font-size:14px;letter-spacing:0;color:#D4B896;font-weight:600}
 .land-brand span{color:var(--gold)}
-.lang-btn{cursor:pointer;background:rgba(255,255,255,.12);color:#C9D8E6;border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:5px 10px;font-size:11px;font-family:var(--mono);font-weight:700;letter-spacing:1px}
+.lang-btn{cursor:pointer;background:rgba(255,255,255,.12);color:#D4B896;border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:5px 10px;font-size:11px;font-family:var(--mono);font-weight:700;letter-spacing:1px}
 .land-hero h1{font-size:26px;font-weight:900;line-height:1.3;letter-spacing:-0.5px}
-.land-hero p{font-size:13.5px;color:#B0C4D8;margin-top:10px;line-height:1.7}
+.land-hero p{font-size:13.5px;color:#D4B896;margin-top:10px;line-height:1.7}
 .land-body{flex:1;padding:20px 20px 0}
-.auth-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:24px;box-shadow:0 4px 20px rgba(22,50,79,.06)}
+.auth-card{background:var(--card);border:1px solid #D4B896;border-radius:18px;padding:20px;margin-bottom:24px;box-shadow:0 4px 20px rgba(60,36,21,.06)}
 .auth-tabs{display:flex;margin-bottom:18px;background:var(--paper);border-radius:12px;padding:3px}
-.auth-tab{flex:1;border:none;background:none;padding:10px;cursor:pointer;font-family:inherit;font-weight:600;font-size:14px;border-radius:10px;color:var(--ink2);transition:all .15s}
-.auth-tab.on{background:var(--ink);color:#fff;box-shadow:0 2px 8px rgba(22,50,79,.15)}
+.auth-tab{flex:1;border:none;background:none;padding:10px;cursor:pointer;font-family:inherit;font-weight:600;font-size:14px;border-radius:10px;color:#8B7355;transition:all .15s}
+.auth-tab.on{background:#3C2415;color:#fff;box-shadow:0 2px 8px rgba(60,36,21,.2)}
 .auth-form .field{margin-bottom:12px}
-.auth-form .field label{font-size:12.5px;margin-bottom:5px}
+.auth-form .field label{font-size:12.5px;margin-bottom:5px;color:#5B3A28}
 .auth-form input{border-radius:12px;padding:13px 14px;font-size:16px}
 .land-features{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
 .lf{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
@@ -58,7 +57,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-off
 .lf p{font-size:12.5px;color:var(--ink2);line-height:1.5;margin:0}
 .footer{text-align:center;padding:16px 20px 32px;font-size:11px;color:#9AA6AF}
 /* ---- dashboard ---- */
-.dash-head{background:var(--navy);color:#fff;padding:20px;display:flex;justify-content:space-between;align-items:center}
+.dash-head{background:var(--navy);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
 .dash-head .logo{font-weight:900;font-size:18px;letter-spacing:-0.5px}.dash-head .logo span{color:var(--gold)}
 .dash-user{display:flex;align-items:center;gap:10px;font-size:13px}
 .dash-user img{width:32px;height:32px;border-radius:50%;border:2px solid rgba(255,255,255,.3)}
@@ -77,132 +76,141 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-off
 .create-card .cc-icon{font-size:32px}
 /* ---- wizard ---- */
 
-.wiz-head{background:var(–navy);color:#fff;padding:16px 20px;display:flex;align-items:center;gap:12px}
+.wiz-head{background:var(--navy);color:#fff;padding:14px 20px;display:flex;align-items:center;gap:12px}
 .wiz-head .back{cursor:pointer;font-size:20px;background:none;border:none;color:#C9D8E6;padding:4px}
-.wiz-head h2{font-size:17px;font-weight:800}
-.wiz-progress{height:4px;background:#1F3B56;margin-bottom:24px}.wiz-progress>div{height:100%;background:var(–red);border-radius:2px;transition:width .3s}
+.wiz-head h2{font-size:17px;font-weight:800;color:#fff}
+.wiz-progress{height:4px;background:#1F3B56;margin-bottom:24px}.wiz-progress>div{height:100%;background:var(--red);border-radius:2px;transition:width .3s}
 .wiz-body{padding:0 20px;max-width:520px;margin:0 auto}
 .wiz-q{font-size:20px;font-weight:800;margin-bottom:6px}
-.wiz-sub{font-size:13.5px;color:var(–ink2);margin-bottom:20px;line-height:1.5}
+.wiz-sub{font-size:13.5px;color:var(--ink2);margin-bottom:20px;line-height:1.5}
 .wiz-opts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
-.wiz-opt{cursor:pointer;padding:12px 18px;border:1.5px solid var(–line);border-radius:12px;font-weight:600;font-size:14px;background:var(–card);transition:all .15s}
-.wiz-opt:hover{border-color:var(–ink)}
-.wiz-opt.on{background:var(–ink);color:#fff;border-color:var(–ink)}
+.wiz-opt{cursor:pointer;padding:12px 18px;border:1.5px solid var(--line);border-radius:12px;font-weight:600;font-size:14px;background:var(--card);transition:all .15s}
+.wiz-opt:hover{border-color:var(--ink)}
+.wiz-opt.on{background:var(--ink);color:#fff;border-color:var(--ink)}
 .wiz-nav{display:flex;gap:12px;margin-top:30px;padding-bottom:40px}
-.mode-cards{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
-.mode-card{cursor:pointer;background:var(–card);border:2px solid var(–line);border-radius:16px;padding:20px;text-align:center;transition:all .15s}
-.mode-card:hover,.mode-card:active{border-color:var(–ink);transform:scale(.98)}
-.mc-icon{font-size:36px;margin-bottom:8px}.mc-title{font-weight:800;font-size:16px}.mc-desc{font-size:13px;color:var(–ink2);margin-top:4px}
-.hotel-entry{background:var(–card);border:1px solid var(–line);border-radius:12px;padding:14px;margin-bottom:12px}
+.mode-cards{display:flex;flex-direction:column;gap:14px;margin-bottom:16px}
+.mode-card{cursor:pointer;background:var(--card);border:2px solid var(--line);border-radius:18px;padding:24px 20px;text-align:center;transition:all .15s;box-shadow:0 2px 10px rgba(22,50,79,.05)}
+.mode-card:active{transform:scale(.96);border-color:var(--gold)}
+.mc-icon{font-size:42px;margin-bottom:10px}.mc-title{font-weight:800;font-size:17px;color:var(--ink)}.mc-desc{font-size:13px;color:var(--ink2);margin-top:6px;line-height:1.5}
+.mode-card:first-child{border-color:#C98A28;background:linear-gradient(135deg,#FFFDF6,#FFF8EC)}
+.mode-card:last-child{border-color:var(--line);background:var(--card)}
+.hotel-entry{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px}
 .hotel-entry .row{display:flex;gap:8px}.hotel-entry input{font-size:13px;padding:9px 10px}
-/* –– generating –– */
-.gen-spinner{width:60px;height:60px;border:4px solid var(–line);border-top-color:var(–red);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 20px}
+/* ---- generating ---- */
+.gen-spinner{width:60px;height:60px;border:4px solid var(--line);border-top-color:var(--red);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 20px}
 @keyframes spin{to{transform:rotate(360deg)}}
-.gen-text{font-size:18px;font-weight:700}.gen-sub{font-size:14px;color:var(–ink2);margin-top:8px;line-height:1.6}
+.gen-text{font-size:18px;font-weight:700}.gen-sub{font-size:14px;color:var(--ink2);margin-top:8px;line-height:1.6}
 .gen-steps{margin-top:24px;text-align:left;max-width:340px}
-.gen-step{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:13.5px;color:var(–ink2)}
-.gen-step.done{color:var(–matcha);font-weight:600}
+.gen-step{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:13.5px;color:var(--ink2)}
+.gen-step.done{color:var(--matcha);font-weight:600}
 .gen-step .gs-icon{width:24px;text-align:center;font-size:16px}
-/* –– trip view (reuses most styles from original app) –– */
-.tv-head{background:var(–navy);color:#fff;padding:14px 16px}
+/* ---- trip view (reuses most styles from original app) ---- */
+.tv-head{background:var(--navy);color:#fff;padding:16px 18px}
 .tv-head .tv-top{display:flex;justify-content:space-between;align-items:flex-start}
 .tv-head .back{cursor:pointer;font-size:18px;background:none;border:none;color:#C9D8E6;padding:4px;margin-right:8px}
 .tv-head .tv-title{font-size:20px;font-weight:800;margin-top:2px}
-.tv-head .tv-meta{display:flex;gap:12px;margin-top:8px;font-family:var(–mono);font-size:11px;color:#C9D8E6;flex-wrap:wrap}
+.tv-head .tv-meta{display:flex;gap:12px;margin-top:8px;font-family:var(--mono);font-size:11px;color:#C9D8E6;flex-wrap:wrap}
 .tv-share{display:flex;align-items:center;gap:6px;margin-top:10px}
 .tv-share input{flex:1;font-size:11px;padding:6px 8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:7px}
-.tv-share button{background:var(–gold);color:#fff;border:none;border-radius:7px;padding:6px 12px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit}
-nav.tabs{display:flex;position:sticky;top:0;z-index:30;background:var(–card);border-bottom:1px solid var(–line);box-shadow:0 1px 6px rgba(0,0,0,.05)}
+.tv-share button{background:var(--gold);color:#fff;border:none;border-radius:7px;padding:6px 12px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit}
+nav.tabs{display:flex;position:sticky;top:0;z-index:30;background:var(--card);border-bottom:1px solid var(--line);box-shadow:0 1px 6px rgba(0,0,0,.05)}
 nav.tabs button{flex:1;border:none;background:none;padding:9px 0 7px;cursor:pointer;border-bottom:3px solid transparent;color:#9AA6AF;font-weight:500;font-size:10.5px;display:flex;flex-direction:column;align-items:center;gap:2px;font-family:inherit}
 nav.tabs button .ic{font-size:17px;line-height:1}
-nav.tabs button.on{color:var(–ink);font-weight:800;border-bottom-color:var(–red)}
+nav.tabs button.on{color:var(--ink);font-weight:800;border-bottom-color:var(--red)}
 .tv-main{padding:16px 14px;max-width:680px;margin:0 auto}
 section{display:none}section.on{display:block}
 /* timeline styles */
 .chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:14px}
-.chip{flex:0 0 auto;cursor:pointer;padding:8px 12px;border-radius:12px;border:1px solid var(–line);background:var(–card);color:var(–ink2);text-align:center;min-width:64px}
-.chip .d{font-family:var(–mono);font-weight:800;font-size:15px}.chip .w{font-size:10.5px;opacity:.8;margin-top:2px}
-.chip.on{background:var(–ink);color:#fff;border-color:var(–ink)}
-.dayhead{background:var(–ink);color:#fff;border-radius:14px;padding:14px 16px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:10px}
-.dayhead .k{font-family:var(–mono);font-size:12px;color:#9BB4CC;letter-spacing:1px}.dayhead .c{font-size:19px;font-weight:800;margin-top:3px}
-.dayhead .tag{background:var(–red);font-size:12px;font-weight:700;padding:5px 11px;border-radius:20px;white-space:nowrap}
-.transit{background:#EEF3F7;border:1px solid #DCE6EE;border-radius:10px;padding:9px 12px;margin-bottom:10px;font-size:12.5px;color:var(–ink2);line-height:1.5}
-.navall{width:100%;cursor:pointer;background:var(–matcha);color:#fff;border:none;border-radius:10px;padding:10px;font-weight:700;font-size:13px;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;margin-bottom:12px}
+.chip{flex:0 0 auto;cursor:pointer;padding:8px 12px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink2);text-align:center;min-width:64px}
+.chip .d{font-family:var(--mono);font-weight:800;font-size:15px}.chip .w{font-size:10.5px;opacity:.8;margin-top:2px}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dayhead{background:var(--ink);color:#fff;border-radius:14px;padding:14px 16px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.dayhead .k{font-family:var(--mono);font-size:12px;color:#9BB4CC;letter-spacing:1px}.dayhead .c{font-size:19px;font-weight:800;margin-top:3px}
+.dayhead .tag{background:var(--red);font-size:12px;font-weight:700;padding:5px 11px;border-radius:20px;white-space:nowrap}
+.transit{background:#EEF3F7;border:1px solid #DCE6EE;border-radius:10px;padding:9px 12px;margin-bottom:10px;font-size:12.5px;color:var(--ink2);line-height:1.5}
+.navall{width:100%;cursor:pointer;background:var(--matcha);color:#fff;border:none;border-radius:10px;padding:10px;font-weight:700;font-size:13px;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;margin-bottom:12px}
 .item{display:flex;gap:11px}
-.tcol{flex:0 0 44px;text-align:right;padding-top:2px}.tcol .tt{font-family:var(–mono);font-size:12px;font-weight:700}
+.tcol{flex:0 0 44px;text-align:right;padding-top:2px}.tcol .tt{font-family:var(--mono);font-size:12px;font-weight:700}
 .nodecol{display:flex;flex-direction:column;align-items:center}
 .node{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;box-shadow:0 2px 5px rgba(0,0,0,.12);flex:0 0 auto}
-.vline{flex:1;width:2px;background:var(–line);margin-top:2px;min-height:14px}
-.card{flex:1;background:var(–card);border:1px solid var(–line);border-radius:12px;padding:11px 13px;margin-bottom:14px;min-width:0}
+.vline{flex:1;width:2px;background:var(--line);margin-top:2px;min-height:14px}
+.card{flex:1;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 13px;margin-bottom:14px;min-width:0}
 .card .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
 .card .ti{font-weight:700;font-size:14.5px;line-height:1.35}
 .badge{flex:0 0 auto;font-size:10.5px;border-radius:6px;padding:1px 6px;font-weight:600}
-.info{display:inline-flex;gap:10px;margin-top:8px;font-size:11.5px;color:var(–ink2);background:#F3F0E8;border-radius:7px;padding:5px 9px;flex-wrap:wrap}
-.intro{margin:8px 0 0;font-size:13px;color:var(–ink2);line-height:1.65}
+.info{display:inline-flex;gap:10px;margin-top:8px;font-size:11.5px;color:var(--ink2);background:#F3F0E8;border-radius:7px;padding:5px 9px;flex-wrap:wrap}
+.intro{margin:8px 0 0;font-size:13px;color:var(--ink2);line-height:1.65}
 .rec{background:#FFF8EC;border:1px solid #F0E2C4;border-radius:10px;padding:10px 12px;margin-top:9px}
 .rec .rn{font-weight:800;font-size:13.5px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.rstar{font-family:var(–mono);color:#fff;background:var(–gold);border-radius:5px;padding:1px 6px;font-size:11px;font-weight:700}
+.rstar{font-family:var(--mono);color:#fff;background:var(--gold);border-radius:5px;padding:1px 6px;font-size:11px;font-weight:700}
 .rec .rmeta{font-size:11.5px;color:#9A7B3F;margin-top:4px;line-height:1.5}
 .alts{margin-top:8px;border-top:1px dashed #EAD9B4;padding-top:7px}
 .alts .al{font-size:11px;color:#9A7B3F;margin-bottom:4px;font-weight:700}
-.altlink{display:inline-flex;align-items:center;gap:4px;font-size:12px;text-decoration:none;color:var(–ink);background:#fff;border:1px solid #E7DFCF;border-radius:7px;padding:4px 8px;margin:0 6px 6px 0;font-weight:600}
-.altlink .s{font-family:var(–mono);color:var(–gold);font-size:10.5px}
+.altlink{display:inline-flex;align-items:center;gap:4px;font-size:12px;text-decoration:none;color:var(--ink);background:#fff;border:1px solid #E7DFCF;border-radius:7px;padding:4px 8px;margin:0 6px 6px 0;font-weight:600}
+.altlink .s{font-family:var(--mono);color:var(--gold);font-size:10.5px}
 .btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .mapbtn,.dirbtn{display:inline-flex;align-items:center;gap:5px;font-size:12px;text-decoration:none;padding:5px 10px;border-radius:8px;font-weight:600}
-.mapbtn{color:#fff;background:var(–ink)}.dirbtn{color:#fff;background:var(–matcha)}
-.recgo{display:inline-flex;align-items:center;gap:5px;font-size:12px;text-decoration:none;padding:5px 10px;border-radius:8px;font-weight:600;color:#fff;background:var(–gold);margin-top:8px}
+.mapbtn{color:#fff;background:var(--ink)}.dirbtn{color:#fff;background:var(--matcha)}
+.recgo{display:inline-flex;align-items:center;gap:5px;font-size:12px;text-decoration:none;padding:5px 10px;border-radius:8px;font-weight:600;color:#fff;background:var(--gold);margin-top:8px}
 /* shared panel styles */
-.hero-box{background:var(–ink);color:#fff;border-radius:14px;padding:16px 18px;margin-bottom:16px}
+.hero-box{background:var(--ink);color:#fff;border-radius:14px;padding:16px 18px;margin-bottom:16px}
 .hero-box .lbl{font-size:12px;color:#9BB4CC;letter-spacing:1px}
-.hero-box .big{font-family:var(–mono);font-size:30px;font-weight:800;margin-top:2px}
-.hero-box .sub{font-family:var(–mono);font-size:14px;color:var(–gold);margin-top:2px}
-.panel{background:var(–card);border:1px solid var(–line);border-radius:14px;padding:14px;margin-bottom:16px}
+.hero-box .big{font-family:var(--mono);font-size:30px;font-weight:800;margin-top:2px}
+.hero-box .sub{font-family:var(--mono);font-size:14px;color:var(--gold);margin-top:2px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:16px}
 .panel h3{margin:0 0 10px;font-size:14px;font-weight:800;display:flex;align-items:center;gap:6px}
 .row{display:flex;gap:8px}
 .catrow{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
-.catbtn{cursor:pointer;font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:20px;border:1px solid var(–line);background:var(–card);color:var(–ink2)}
-.addbtn{cursor:pointer;background:var(–red);color:#fff;border:none;border-radius:9px;padding:0 18px;font-weight:700;font-size:14px}
-.exp{display:flex;align-items:center;gap:10px;background:var(–card);border:1px solid var(–line);border-radius:11px;padding:10px 12px;margin-bottom:8px}
+.catbtn{cursor:pointer;font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:20px;border:1px solid var(--line);background:var(--card);color:var(--ink2)}
+.addbtn{cursor:pointer;background:var(--red);color:#fff;border:none;border-radius:9px;padding:0 18px;font-weight:700;font-size:14px}
+.exp{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px 12px;margin-bottom:8px}
 .dot{width:9px;height:9px;border-radius:3px;flex:0 0 auto}
 .del{cursor:pointer;border:none;background:none;color:#C9B8B8;font-size:16px;padding:2px 4px}
-.empty{text-align:center;color:#9AA6AF;font-size:13px;padding:22px 0;border:1px dashed var(–line);border-radius:12px}
+.empty{text-align:center;color:#9AA6AF;font-size:13px;padding:22px 0;border:1px dashed var(--line);border-radius:12px}
 .qgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.qcell{background:var(–card);border:1px solid var(–line);border-radius:11px;padding:11px 13px;display:flex;justify-content:space-between;align-items:center}
-.qcell .j{font-family:var(–mono);font-weight:700;font-size:14px}.qcell .h{font-family:var(–mono);color:var(–gold);font-weight:700;font-size:13px}
+.qcell{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:11px 13px;display:flex;justify-content:space-between;align-items:center}
+.qcell .j{font-family:var(--mono);font-weight:700;font-size:14px}.qcell .h{font-family:var(--mono);color:var(--gold);font-weight:700;font-size:13px}
 .bkcat{margin-bottom:16px}.bkcat .bh{display:flex;align-items:center;gap:7px;font-weight:800;font-size:14px;margin-bottom:9px}
-.bkcat .bh .ic,.phase .ph .ic{width:26px;height:26px;border-radius:8px;background:var(–ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px}
-.bk{display:flex;align-items:center;gap:10px;background:var(–card);border:1px solid var(–line);border-radius:11px;padding:10px 12px;margin-bottom:8px}
+.bkcat .bh .ic,.phase .ph .ic{width:26px;height:26px;border-radius:8px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px}
+.bk{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px 12px;margin-bottom:8px}
 .bk .nm{flex:1;font-size:13.5px;font-weight:600;min-width:0}.bk .nm small{display:block;color:#9AA6AF;font-weight:400;font-size:11px;margin-top:2px}
-.bk .go{flex:0 0 auto;font-size:12px;color:#fff;background:var(–ink);text-decoration:none;padding:5px 10px;border-radius:8px;font-weight:600}
-.prog{height:8px;background:#1F3B56;border-radius:20px;margin-top:10px;overflow:hidden}.prog>div{height:100%;background:var(–matcha);border-radius:20px;transition:width .3s}
+.bk .go{flex:0 0 auto;font-size:12px;color:#fff;background:var(--ink);text-decoration:none;padding:5px 10px;border-radius:8px;font-weight:600}
+.prog{height:8px;background:#1F3B56;border-radius:20px;margin-top:10px;overflow:hidden}.prog>div{height:100%;background:var(--matcha);border-radius:20px;transition:width .3s}
 .phase{margin-bottom:18px}.phase .ph{display:flex;align-items:center;gap:7px;font-weight:800;font-size:14px;margin-bottom:9px}
-.chk{display:flex;align-items:center;gap:10px;background:var(–card);border:1px solid var(–line);border-radius:11px;padding:10px 12px;margin-bottom:8px}
+.chk{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px 12px;margin-bottom:8px}
 .chk .box{cursor:pointer;flex:0 0 auto;width:22px;height:22px;border-radius:7px;border:1.5px solid #CBD2C4;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px}
-.chk .lab{flex:1;font-size:13.5px;color:var(–ink);font-weight:600}.chk.on .box{background:var(–matcha);border-color:var(–matcha)}.chk.on .lab{color:#8A9A7C;text-decoration:line-through;font-weight:500}
+.chk .lab{flex:1;font-size:13.5px;color:var(--ink);font-weight:600}.chk.on .box{background:var(--matcha);border-color:var(--matcha)}.chk.on .lab{color:#8A9A7C;text-decoration:line-through;font-weight:500}
 .chk .mini{cursor:pointer;border:none;background:none;font-size:14px;padding:2px 3px;color:#B7BCC2}
-.phrase{display:flex;justify-content:space-between;gap:8px;background:var(–card);border:1px solid var(–line);border-radius:9px;padding:9px 11px;margin-bottom:7px;font-size:13px}
-.phrase .jp{font-weight:700;color:var(–ink);text-align:right}
-.emc{background:var(–card);border:1px solid var(–line);border-radius:9px;padding:10px 12px;margin-bottom:8px;font-size:13px;line-height:1.6}
-.emc b{color:var(–red)}
+.phrase{display:flex;justify-content:space-between;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:9px;padding:9px 11px;margin-bottom:7px;font-size:13px}
+.phrase .jp{font-weight:700;color:var(--ink);text-align:right}
+.emc{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:10px 12px;margin-bottom:8px;font-size:13px;line-height:1.6}
+.emc b{color:var(--red)}
 .note{font-size:11.5px;color:#9AA6AF;text-align:center;margin-top:6px;line-height:1.6}
-.notebox{background:#FFFDF6;border:1px dashed var(–gold);border-radius:10px;padding:8px 10px;margin-bottom:14px}
-.notebox .nl{font-size:11px;color:var(–gold);font-weight:700;margin-bottom:4px}
-.notebox textarea{width:100%;border:none;background:transparent;font-family:inherit;font-size:13px;color:var(–ink);resize:vertical;min-height:34px}
+.notebox{background:#FFFDF6;border:1px dashed var(--gold);border-radius:10px;padding:8px 10px;margin-bottom:14px}
+.notebox .nl{font-size:11px;color:var(--gold);font-weight:700;margin-bottom:4px}
+.notebox textarea{width:100%;border:none;background:transparent;font-family:inherit;font-size:13px;color:var(--ink);resize:vertical;min-height:34px}
 .gen-error{background:#FEF2F0;border:1px solid #F5D5CF;border-radius:12px;padding:16px;margin:20px;text-align:center}
-.gen-error h3{color:var(–red);font-size:16px;margin-bottom:8px}
-.gen-error p{font-size:13px;color:var(–ink2);line-height:1.5}
+.gen-error h3{color:var(--red);font-size:16px;margin-bottom:8px}
+.gen-error p{font-size:13px;color:var(--ink2);line-height:1.5}
+.edform label{font-size:11px;color:var(--ink2);font-weight:700;display:block;margin:10px 0 4px}
+.edform input,.edform textarea{width:100%;font-size:13px;padding:8px 10px}
+.edform textarea{min-height:60px;resize:vertical;font-family:inherit}
+.edrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.edbtn{cursor:pointer;border:none;border-radius:8px;padding:8px 14px;font-weight:700;font-size:12.5px;font-family:inherit}
+.edsave{background:var(--matcha);color:#fff}.edcancel{background:#E7DFCF;color:var(--ink)}.edhide{background:#F3E3DF;color:var(--red)}
+.filebtn{display:inline-block;cursor:pointer;background:var(--ink);color:#fff;border-radius:8px;padding:7px 12px;font-size:12px;font-weight:600}
+.editico{cursor:pointer;border:none;background:none;font-size:13px;color:#B7BCC2;padding:0 2px;flex:0 0 auto}
+.additem{width:100%;cursor:pointer;background:transparent;border:1.5px dashed var(--line);color:var(--ink2);border-radius:10px;padding:10px;font-weight:700;font-size:13px;font-family:inherit;margin:14px 0}
 </style>
-
 </head>
 <body>
 
 <!-- ===== LANDING ===== -->
-
 <div id="landing">
   <div class="land-top">
-    <div class="land-topbar"><div class="land-brand">Trip<span>Craft</span></div><button class="lang-btn" id="landLang" onclick="cycleLang()">EN</button></div>
+    <div class="land-topbar"><div class="land-brand">@Trip<span>Craft</span></div><button class="lang-btn" id="landLang" onclick="cycleLang()">EN</button></div>
     <div class="land-hero">
-      <h1>規劃你的<br>完美旅行</h1>
+      <h1>規劃你的完美旅行</h1>
       <p>輸入目的地，自動生成行程——<br>餐廳推薦、導航、記帳、分享給旅伴。</p>
     </div>
   </div>
@@ -217,7 +225,6 @@ section{display:none}section.on{display:block}
         <div class="field"><label>🔒 密碼</label><input id="authPw" type="password" placeholder="至少 6 位"></div>
         <div id="authErr" style="font-size:12px;color:var(--red);margin-bottom:8px;min-height:18px"></div>
         <button class="btn btn-primary" style="width:100%" id="authBtn" onclick="doAuth()">登入</button>
-        <div style="text-align:center;margin-top:12px;font-size:11.5px;color:#9AA6AF">免費使用 · 資料雲端同步</div>
       </div>
     </div>
     <div class="land-features">
@@ -231,7 +238,6 @@ section{display:none}section.on{display:block}
 </div>
 
 <!-- ===== DASHBOARD ===== -->
-
 <div id="dashboard">
   <div class="dash-head">
     <div class="logo">Trip<span>Craft</span></div>
@@ -248,7 +254,6 @@ section{display:none}section.on{display:block}
 </div>
 
 <!-- ===== WIZARD ===== -->
-
 <div id="wizard">
   <div class="wiz-head">
     <button class="back" onclick="showDashboard()">←</button>
@@ -259,7 +264,6 @@ section{display:none}section.on{display:block}
 </div>
 
 <!-- ===== GENERATING ===== -->
-
 <div id="generating">
   <div class="gen-spinner"></div>
   <div class="gen-text">正在規劃你的旅程...</div>
@@ -268,7 +272,6 @@ section{display:none}section.on{display:block}
 </div>
 
 <!-- ===== TRIP VIEW ===== -->
-
 <div id="tripview">
   <div class="tv-head">
     <div class="tv-top">
@@ -308,8 +311,8 @@ function showView(id){['landing','dashboard','wizard','generating','tripview'].f
 const LANGS=['zh-TW','en'];
 const LANG_LABEL={'zh-TW':'繁','en':'EN'};
 const I18N={
-  'zh-TW':{h1:'規劃你的<br>完美旅行',sub:'輸入目的地，自動生成行程——<br>餐廳推薦、導航、記帳、分享給旅伴。',login:'登入',signup:'註冊',email:'📧 Email',pw:'🔒 密碼',pwph:'至少 6 位',free:'免費使用 · 資料雲端同步',f1t:'✨ 智能規劃',f1d:'搜尋景點、餐廳、交通，自動生成每日行程',f2t:'✏️ 完全可編輯',f2d:'時間、地點、照片都能自由修改',f3t:'🔗 旅伴共用',f3d:'獨立連結分享，大家共用同一份行程',f4t:'💰 記帳換算',f4d:'即時匯率、分類圖表，花費一目了然',mytrips:'我的旅程',newtrip:'建立新旅程',logout:'登出'},
-  'en':{h1:'Plan Your<br>Perfect Trip',sub:'Enter a destination and get a full itinerary —<br>restaurants, navigation, budgeting, shared with your travel buddies.',login:'Log in',signup:'Sign up',email:'📧 Email',pw:'🔒 Password',pwph:'At least 6 characters',free:'Free · Cloud synced',f1t:'✨ Smart Planning',f1d:'Search attractions, restaurants & transport, auto-generate daily plans',f2t:'✏️ Fully Editable',f2d:'Modify times, places & photos freely',f3t:'🔗 Share with Friends',f3d:'Unique link for everyone to co-edit the trip',f4t:'💰 Expense Tracker',f4d:'Real-time currency conversion & spending charts',mytrips:'My Trips',newtrip:'Create New Trip',logout:'Log out'}
+  'zh-TW':{h1:'規劃你的完美旅行',sub:'輸入目的地，自動生成行程——<br>餐廳推薦、導航、記帳、分享給旅伴。',login:'登入',signup:'註冊',email:'📧 Email',pw:'🔒 密碼',pwph:'至少 6 位',free:'',f1t:'智能規劃',f1d:'搜尋景點、餐廳、交通，自動生成每日行程',f2t:'完全可編輯',f2d:'時間、地點、照片都能自由修改',f3t:'旅伴共用',f3d:'獨立連結分享，大家共用同一份行程',f4t:'記帳換算',f4d:'即時匯率、分類圖表，花費一目了然',mytrips:'我的旅程',newtrip:'建立新旅程',logout:'登出'},
+  'en':{h1:'Plan Your Perfect Trip',sub:'Enter a destination and get a full itinerary —<br>restaurants, navigation, budgeting, shared with your travel buddies.',login:'Log in',signup:'Sign up',email:'📧 Email',pw:'🔒 Password',pwph:'At least 6 characters',free:'',f1t:'Smart Planning',f1d:'Search attractions, restaurants & transport, auto-generate daily plans',f2t:'Fully Editable',f2d:'Modify times, places & photos freely',f3t:'Share with Friends',f3d:'Unique link for everyone to co-edit the trip',f4t:'Expense Tracker',f4d:'Real-time currency conversion & spending charts',mytrips:'My Trips',newtrip:'Create New Trip',logout:'Log out'}
 };
 let curLang='zh-TW';
 function cycleLang(){
@@ -612,130 +615,160 @@ function renderTab(){
   (r[curTab]||r.plan)(m);
 }
 
-/* ===== PLAN TAB ===== */
+/* ===== PLAN TAB (full edit) ===== */
+let editItemKey=null;
+function fileToB64(file,cb){const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const max=800;let w=im.width,h=im.height;const s=Math.min(1,max/Math.max(w,h));const c=document.createElement('canvas');c.width=Math.round(w*s);c.height=Math.round(h*s);c.getContext('2d').drawImage(im,0,0,c.width,c.height);try{cb(c.toDataURL('image/jpeg',0.7));}catch(e){cb(r.result);}};im.src=r.result;};r.readAsDataURL(file);}
+
 function renderPlan(el){
-  const days=currentTrip.itinerary||[];if(!days.length){el.innerHTML='<div class="empty">這個旅程還沒有行程。</div>';return;}
-  // chips
-  const chips=ce('div','chips');
-  days.forEach((d,i)=>{const b=ce('button','chip'+(i===curDay?' on':''));b.innerHTML='<div class="d">'+esc(d.date)+'</div><div class="w">（'+esc(d.dow)+'）</div>';b.onclick=()=>{curDay=i;renderTab();};chips.appendChild(b);});
-  el.appendChild(chips);
+  const t=currentTrip,days=t.itinerary||[],ov=t.overrides||{},cust=t.custom_items||{};
+  if(!days.length){el.innerHTML='<div class="empty">還沒有行程內容。</div>';return;}
+  const chips=ce('div','chips');days.forEach((d,i)=>{const b=ce('button','chip'+(i===curDay?' on':''));b.innerHTML='<div class="d">'+esc(d.date)+'</div><div class="w">（'+esc(d.dow)+'）</div>';b.onclick=()=>{curDay=i;editItemKey=null;renderTab();};chips.appendChild(b);});el.appendChild(chips);
   const d=days[curDay];if(!d)return;
-  // dayhead
   el.insertAdjacentHTML('beforeend','<div class="dayhead"><div><div class="k">DAY '+(curDay+1)+' · '+esc(d.date)+'（'+esc(d.dow)+'）</div><div class="c">'+esc(d.city)+'</div></div><span class="tag">'+esc(d.tag)+'</span></div>');
   if(d.transit)el.insertAdjacentHTML('beforeend','<div class="transit">'+esc(d.transit)+'</div>');
   if(d.navStops&&d.navStops.length>1){const a=ce('a','navall');a.href=navUrl(d.navStops,'transit');a.target='_blank';a.textContent='🧭 一鍵導航今日全部景點';el.appendChild(a);}
-  // notes
-  const nb=ce('div','notebox');nb.innerHTML='<div class="nl">📝 今日備註</div>';
-  const ta=ce('textarea');ta.value=(currentTrip.notes||{})[curDay]||'';ta.placeholder='隨手記…';
-  let noteTimer;ta.oninput=()=>{clearTimeout(noteTimer);noteTimer=setTimeout(()=>{const n=currentTrip.notes||{};n[curDay]=ta.value;saveTrip({notes:n});},800);};
-  nb.appendChild(ta);el.appendChild(nb);
-  // items
-  const tl=ce('div');tl.style.position='relative';
-  (d.items||[]).forEach((it,idx)=>{
-    const m=TYPE[it.type]||TYPE.see;const last=idx===(d.items.length-1);
+  const nb=ce('div','notebox');nb.innerHTML='<div class="nl">📝 今日備註</div>';const ta=ce('textarea');ta.value=(t.notes||{})[curDay]||'';ta.placeholder='隨手記…';let nt;ta.oninput=()=>{clearTimeout(nt);nt=setTimeout(()=>{const n=t.notes||{};n[curDay]=ta.value;saveTrip({notes:n});},800);};nb.appendChild(ta);el.appendChild(nb);
+  const tl=ce('div');const items=d.items||[];
+  items.forEach((it,idx)=>{
+    const key='d'+curDay+'i'+idx,m=TYPE[it.type]||TYPE.see,last=idx===items.length-1;
+    const o=ov[key]||{};const merged={...it,...(o.t!=null?{t:o.t}:{}),
+      ...(o.title!=null?{title:o.title}:{}),
+      ...(o.intro!=null?{intro:o.intro}:{})};
+    if(o.hidden)return;
     const wrap=ce('div','item');
-    let h='<div class="tcol"><div class="tt">'+esc(it.t)+'</div></div><div class="nodecol"><div class="node" style="background:'+m.c+'">'+m.i+'</div>'+(last?'':'<div class="vline"></div>')+'</div><div class="card"><div class="top"><div class="ti">'+esc(it.title)+'</div><span class="badge" style="color:'+m.c+';border:1px solid '+m.c+'">'+m.l+'</span></div>';
-    if(it.intro)h+='<div class="intro">'+esc(it.intro)+'</div>';
-    if(it.info){let inf='';it.info.forEach(x=>inf+='<span>'+x[0]+' '+esc(x[1])+'</span>');h+='<div class="info">'+inf+'</div>';}
-    if(it.rec){h+='<div class="rec"><div class="rn">🍽️ '+esc(it.rec.name)+(it.rec.rating?' <span class="rstar">★ '+it.rec.rating+'</span>':'')+'</div>';if(it.rec.meta)h+='<div class="rmeta">'+esc(it.rec.meta)+'</div>';
-      h+='<a class="recgo" target="_blank" href="'+gmap(it.rec.name)+'">📍 在地圖開啟</a>';
-      if(it.rec.alts&&it.rec.alts.length){h+='<div class="alts"><div class="al">其他選擇：</div>';it.rec.alts.forEach(a=>{h+='<a class="altlink" target="_blank" href="'+gmap(a[0])+'">'+esc(a[0])+(a[1]?' <span class="s">★'+a[1]+'</span>':'')+'</a>';});h+='</div>';}
-      h+='</div>';}
+    if(editItemKey===key){wrap.innerHTML='<div class="tcol"><div class="tt">'+esc(merged.t)+'</div></div><div class="nodecol"><div class="node" style="background:'+m.c+'">'+m.i+'</div>'+(last?'':'<div class="vline"></div>')+'</div><div class="card"></div>';wrap.querySelector('.card').appendChild(mkEditForm(key,merged,false));tl.appendChild(wrap);return;}
+    let h='<div class="tcol"><div class="tt">'+esc(merged.t)+'</div></div><div class="nodecol"><div class="node" style="background:'+m.c+'">'+m.i+'</div>'+(last?'':'<div class="vline"></div>')+'</div><div class="card"><div class="top"><div class="ti">'+esc(merged.title)+'</div><div style="display:flex;gap:4px;align-items:center"><span class="badge" style="color:'+m.c+';border:1px solid '+m.c+'">'+m.l+'</span><button class="editico" title="Edit">✏️</button></div></div>';
+    if(merged.intro)h+='<div class="intro">'+esc(merged.intro)+'</div>';
+    if(merged.info){let inf='';merged.info.forEach(x=>inf+='<span>'+x[0]+' '+esc(x[1])+'</span>');h+='<div class="info">'+inf+'</div>';}
+    if(merged.rec){h+='<div class="rec"><div class="rn">🍽️ '+esc(merged.rec.name)+(merged.rec.rating?' <span class="rstar">★ '+merged.rec.rating+'</span>':'')+'</div>';if(merged.rec.meta)h+='<div class="rmeta">'+esc(merged.rec.meta)+'</div>';h+='<a class="recgo" target="_blank" href="'+gmap(merged.rec.name)+'">📍 地圖</a>';if(merged.rec.alts&&merged.rec.alts.length){h+='<div class="alts"><div class="al">其他選擇：</div>';merged.rec.alts.forEach(a=>{h+='<a class="altlink" target="_blank" href="'+gmap(a[0])+'">'+esc(a[0])+(a[1]?' <span class="s">★'+a[1]+'</span>':'')+'</a>';});h+='</div>';}h+='</div>';}
+    const addImgs=(o.addImgs||[]);if(addImgs.length){h+='<div class="imgs">';addImgs.forEach(src=>{h+='<img class="thumb" src="'+src+'" onclick="openLb(this.src)">';});h+='</div>';}
     let btns='';
-    if(it.dir)btns+='<a class="dirbtn" target="_blank" href="'+dirUrl(it.dir[0],it.dir[1],it.dir[2])+'">🧭 導航</a>';
-    if(it.mapQuery)btns+='<a class="mapbtn" target="_blank" href="'+gmap(it.mapQuery)+'">📍 地圖</a>';
+    if(merged.dir)btns+='<a class="dirbtn" target="_blank" href="'+dirUrl(merged.dir[0],merged.dir[1],merged.dir[2])+'">🧭 導航</a>';
+    if(merged.mapQuery)btns+='<a class="mapbtn" target="_blank" href="'+gmap(merged.mapQuery)+'">📍 地圖</a>';
     if(btns)h+='<div class="btns">'+btns+'</div>';
-    h+='</div>';wrap.innerHTML=h;tl.appendChild(wrap);
+    h+='</div>';wrap.innerHTML=h;
+    wrap.querySelector('.editico').onclick=()=>{editItemKey=key;renderTab();};
+    tl.appendChild(wrap);
   });
+  (cust[curDay]||[]).forEach((c,ci)=>{const key='c'+curDay+'_'+ci;const m=TYPE[c.type]||{i:'📌',c:'#7C8B99',l:'Custom'};
+    const wrap=ce('div','item');
+    if(editItemKey===key){wrap.innerHTML='<div class="tcol"><div class="tt">'+esc(c.t||'')+'</div></div><div class="nodecol"><div class="node" style="background:'+m.c+'">'+m.i+'</div></div><div class="card"></div>';wrap.querySelector('.card').appendChild(mkEditForm(key,c,true,ci));tl.appendChild(wrap);return;}
+    let h='<div class="tcol"><div class="tt">'+esc(c.t||'')+'</div></div><div class="nodecol"><div class="node" style="background:'+m.c+'">'+m.i+'</div></div><div class="card"><div class="top"><div class="ti">'+esc(c.title||'')+'</div><button class="editico">✏️</button></div>';
+    if(c.intro)h+='<div class="intro">'+esc(c.intro)+'</div>';
+    (c.addImgs||[]).forEach(src=>{h+='<img class="thumb" src="'+src+'" onclick="openLb(this.src)">';});
+    h+='</div>';wrap.innerHTML=h;wrap.querySelector('.editico').onclick=()=>{editItemKey=key;renderTab();};tl.appendChild(wrap);});
   el.appendChild(tl);
+  const add=ce('button','additem');add.textContent='➕ 新增行程項目';add.onclick=()=>{const c=cust[curDay]||[];c.push({t:'',title:'',intro:'',type:'see',addImgs:[]});cust[curDay]=c;editItemKey='c'+curDay+'_'+(c.length-1);saveTrip({custom_items:cust});renderTab();};el.appendChild(add);
 }
+function mkEditForm(key,it,isCustom,ci){
+  const box=ce('div','edform');
+  box.innerHTML='<label>時間</label><input class="e-t" value="'+esc(it.t||'')+'"><label>標題</label><input class="e-title" value="'+esc(it.title||'')+'"><label>說明</label><textarea class="e-intro">'+esc(it.intro||'')+'</textarea><label>Google Maps 連結 / 餐廳名稱</label><input class="e-map" placeholder="貼上連結或輸入名稱" value="'+esc(it.mapQuery||'')+'"><label>圖片</label><div class="edrow"><label class="filebtn">📷 加照片<input type="file" accept="image/*" multiple style="display:none" class="e-file"></label></div>';
+  let pendAdd=[];
+  box.querySelector('.e-file').onchange=e=>{[...e.target.files].forEach(f=>fileToB64(f,d=>{pendAdd.push(d);box.insertAdjacentHTML('beforeend','<img class="thumb" src="'+d+'" style="margin-top:6px">');}));};
+  const row=ce('div','edrow');
+  const save=ce('button','edbtn edsave');save.textContent='💾 儲存';
+  const cancel=ce('button','edbtn edcancel');cancel.textContent='取消';
+  cancel.onclick=()=>{editItemKey=null;renderTab();};
+  save.onclick=async()=>{
+    const t=box.querySelector('.e-t').value,title=box.querySelector('.e-title').value,intro=box.querySelector('.e-intro').value,mq=box.querySelector('.e-map').value;
+    if(isCustom){const cust=currentTrip.custom_items||{};const c=cust[curDay][ci];c.t=t;c.title=title;c.intro=intro;c.mapQuery=mq;c.addImgs=(c.addImgs||[]).concat(pendAdd);await saveTrip({custom_items:cust});}
+    else{const ov=currentTrip.overrides||{};ov[key]={...(ov[key]||{}),t,title,intro,mapQuery:mq,addImgs:((ov[key]||{}).addImgs||[]).concat(pendAdd)};await saveTrip({overrides:ov});}
+    editItemKey=null;renderTab();};
+  if(!isCustom){const hide=ce('button','edbtn edhide');hide.textContent='🙈 隱藏';hide.onclick=async()=>{const ov=currentTrip.overrides||{};ov[key]={...(ov[key]||{}),hidden:true};await saveTrip({overrides:ov});editItemKey=null;renderTab();};row.appendChild(hide);}
+  else{const del=ce('button','edbtn edhide');del.textContent='🗑 刪除';del.onclick=async()=>{const cust=currentTrip.custom_items||{};cust[curDay].splice(ci,1);await saveTrip({custom_items:cust});editItemKey=null;renderTab();};row.appendChild(del);}
+  row.appendChild(save);row.appendChild(cancel);box.appendChild(row);return box;
+}
+function openLb(src){const lb=document.getElementById('lb');if(!lb){const d=ce('div');d.id='lb';d.style.cssText='position:fixed;inset:0;background:rgba(10,15,20,.92);display:flex;z-index:100;align-items:center;justify-content:center;padding:16px';d.innerHTML='<span style="position:absolute;top:14px;right:18px;color:#fff;font-size:30px;cursor:pointer" onclick="this.parentNode.remove()">×</span><img src="'+src+'" style="max-width:100%;max-height:92vh;border-radius:8px">';document.body.appendChild(d);}else lb.remove();}
 
-/* ===== MONEY TAB ===== */
+/* ===== MONEY TAB (full) ===== */
 function renderMoney(el){
-  const t=currentTrip,exp=t.expenses||[],rate=t.fx_rate||1,sym=t.currency==='JPY'?'¥':t.currency||'¥';
+  const t=currentTrip,exp=t.expenses||[],rate=t.fx_rate||1,sym=getCurrSym(t.currency),home=t.home_currency||'HKD';
   const toHome=j=>j/rate;const tot=exp.reduce((s,e)=>s+e.amt,0);
-  el.innerHTML='<div class="hero-box"><div class="lbl">總花費</div><div class="big">'+yen(tot,sym)+'</div><div class="sub">≈ '+t.home_currency+' '+(toHome(tot)).toFixed(0)+'</div></div>';
-  // add form
-  const panel=ce('div','panel');panel.innerHTML='<h3>➕ 新增一筆</h3><div class="row" style="margin-bottom:10px"><div style="position:relative;flex:1"><span style="position:absolute;left:10px;top:10px;font-family:var(--mono);color:#9AA6AF">'+sym+'</span><input id="mAmt" inputmode="decimal" placeholder="金額" style="padding-left:22px;font-family:var(--mono);font-size:16px"></div></div><div class="catrow" id="mCats"></div><div class="row"><input id="mNote" placeholder="備註（可空）" style="font-size:13px"><button class="addbtn" id="mAddBtn">加入</button></div>';
+  el.innerHTML='<div class="hero-box"><div class="lbl">總花費</div><div class="big">'+sym+Math.round(tot).toLocaleString()+'</div><div class="sub">≈ '+home+' '+(toHome(tot)).toFixed(0)+'</div></div>';
+  const panel=ce('div','panel');panel.innerHTML='<h3>➕ 新增一筆</h3><div class="row" style="margin-bottom:10px"><div style="position:relative;flex:1"><span style="position:absolute;left:10px;top:10px;font-family:var(--mono);color:#9AA6AF">'+sym+'</span><input id="mAmt" inputmode="decimal" placeholder="金額" style="padding-left:28px;font-family:var(--mono);font-size:16px"></div></div><div class="catrow" id="mCats"></div><div class="row"><input id="mNote" placeholder="備註（可空）" style="font-size:13px"><button class="addbtn" id="mAddBtn">加入</button></div>';
   el.appendChild(panel);
-  // render cats
   const mc=panel.querySelector('#mCats');CATS.forEach(([k,l,col])=>{const b=ce('button','catbtn');b.textContent=l;if(k===curCat){b.style.background=col;b.style.color='#fff';}b.onclick=()=>{curCat=k;renderTab();};mc.appendChild(b);});
-  panel.querySelector('#mAddBtn').onclick=async()=>{const v=parseFloat(panel.querySelector('#mAmt').value);if(!v)return;const ex=[...exp,{id:Date.now(),amt:Math.round(v),cat:curCat,note:panel.querySelector('#mNote').value.trim(),day:curDay,ts:new Date().toISOString()}];await saveTrip({expenses:ex});renderTab();};
-  // list
+  panel.querySelector('#mAddBtn').onclick=async()=>{const v=parseFloat(panel.querySelector('#mAmt').value);if(!v)return;const nx=[...exp,{id:Date.now(),amt:Math.round(v),cat:curCat,note:panel.querySelector('#mNote').value.trim(),day:curDay,ts:new Date().toISOString()}];await saveTrip({expenses:nx});renderTab();};
+  if(exp.length){const byDay=(t.itinerary||[]).map((d,i)=>({n:d.date.split('/')[1]||i,v:exp.filter(e=>e.day===i).reduce((s,e)=>s+e.amt,0)}));const byCat=CATS.map(([k,l,c])=>({n:l,c,v:exp.filter(e=>e.cat===k).reduce((s,e)=>s+e.amt,0)})).filter(x=>x.v>0);el.insertAdjacentHTML('beforeend','<div class="panel"><h3>📊 每日花費</h3>'+svgBar(byDay,sym)+'</div>');if(byCat.length)el.insertAdjacentHTML('beforeend','<div class="panel"><h3>🥧 分類佔比</h3>'+svgPie(byCat)+'</div>');}
+  el.insertAdjacentHTML('beforeend','<div style="font-weight:700;font-size:13.5px;margin-bottom:8px;color:var(--ink2)">明細（'+exp.length+'）</div>');
   if(!exp.length){el.insertAdjacentHTML('beforeend','<div class="empty">還沒有紀錄。</div>');return;}
-  exp.slice().reverse().forEach(e=>{const cat=CATS.find(c=>c[0]===e.cat)||CATS[5];const row=ce('div','exp');row.innerHTML='<span class="dot" style="background:'+cat[2]+'"></span><div style="flex:1;min-width:0"><div style="font-size:13.5px;font-weight:600">'+cat[1]+(e.note?' <span style="color:#9AA6AF;font-weight:400">· '+esc(e.note)+'</span>':'')+'</div></div><div style="text-align:right"><div style="font-family:var(--mono);font-weight:700;font-size:14px">'+yen(e.amt,sym)+'</div><div style="font-family:var(--mono);font-size:11px;color:var(--gold)">'+t.home_currency+' '+(toHome(e.amt)).toFixed(0)+'</div></div>';const del=ce('button','del');del.textContent='🗑';del.onclick=async()=>{const nx=exp.filter(x=>x.id!==e.id);await saveTrip({expenses:nx});renderTab();};row.appendChild(del);el.appendChild(row);});
+  exp.slice().reverse().forEach(e=>{const cat=CATS.find(c=>c[0]===e.cat)||CATS[5];const row=ce('div','exp');row.innerHTML='<span class="dot" style="background:'+cat[2]+'"></span><div style="flex:1;min-width:0"><div style="font-size:13.5px;font-weight:600">'+cat[1]+(e.note?' <span style="color:#9AA6AF;font-weight:400">· '+esc(e.note)+'</span>':'')+'</div></div><div style="text-align:right"><div style="font-family:var(--mono);font-weight:700;font-size:14px">'+sym+Math.round(e.amt).toLocaleString()+'</div><div style="font-family:var(--mono);font-size:11px;color:var(--gold)">'+home+' '+(toHome(e.amt)).toFixed(0)+'</div></div>';const del=ce('button','del');del.textContent='🗑';del.onclick=async()=>{await saveTrip({expenses:exp.filter(x=>x.id!==e.id)});renderTab();};row.appendChild(del);el.appendChild(row);});
 }
+function getCurrSym(c){return{'JPY':'¥','USD':'$','EUR':'€','GBP':'£','TWD':'NT$','CNY':'¥','KRW':'₩','THB':'฿','SGD':'S$','AUD':'A$','MYR':'RM','HKD':'HK$'}[c]||c+' ';}
+function svgBar(data,sym){const H=170,pad=24,n=data.length||1,max=Math.max(1,...data.map(d=>d.v)),bw=(100-8)/n;let b='',l='';data.forEach((d,i)=>{const x=4+i*bw,bh=Math.max(1,(H-pad-8)*(d.v/max)),y=H-pad-bh;b+='<rect x="'+(x+bw*.15)+'" y="'+y+'" width="'+(bw*.7)+'" height="'+bh+'" rx="1.4" fill="#16324F"></rect>';l+='<text x="'+(x+bw/2)+'" y="'+(H-pad+13)+'" font-size="6.5" text-anchor="middle" fill="#3D5A75">'+d.n+'</text>';if(d.v>0)l+='<text x="'+(x+bw/2)+'" y="'+(y-3)+'" font-size="5.6" text-anchor="middle" fill="#9AA6AF">'+Math.round(d.v/1000)+'k</text>';});return '<svg viewBox="0 0 100 '+H+'" preserveAspectRatio="none" style="width:100%;height:180px">'+b+l+'</svg>';}
+function svgPie(data){const cx=50,cy=50,r=38,ri=20;let s='';const tot=data.reduce((a,d)=>a+d.v,0)||1;let a=-Math.PI/2;data.forEach(d=>{const ang=d.v/tot*Math.PI*2,a2=a+ang,x1=cx+r*Math.cos(a),y1=cy+r*Math.sin(a),x2=cx+r*Math.cos(a2),y2=cy+r*Math.sin(a2),xi2=cx+ri*Math.cos(a2),yi2=cy+ri*Math.sin(a2),xi1=cx+ri*Math.cos(a),yi1=cy+ri*Math.sin(a),lg=ang>Math.PI?1:0;s+='<path d="M'+x1+' '+y1+' A'+r+' '+r+' 0 '+lg+' 1 '+x2+' '+y2+' L'+xi2+' '+yi2+' A'+ri+' '+ri+' 0 '+lg+' 0 '+xi1+' '+yi1+' Z" fill="'+d.c+'"></path>';a=a2;});let leg='';data.forEach(d=>{leg+='<div style="display:flex;align-items:center;gap:7px;font-size:12px;margin-bottom:5px"><span class="dot" style="background:'+d.c+'"></span><span style="flex:1;color:#3D5A75">'+d.n+'</span></div>';});return '<div style="display:flex;align-items:center;gap:8px"><div style="width:52%"><svg viewBox="0 0 100 100" style="width:100%;height:150px">'+s+'</svg></div><div style="flex:1">'+leg+'</div></div>';}
 
-/* ===== FX TAB ===== */
+/* ===== FX TAB (dynamic currencies) ===== */
 function renderFx(el){
-  const t=currentTrip,rate=t.fx_rate||1,sym=t.currency||'¥',home=t.home_currency||'HKD';
-  el.innerHTML='<div class="hero-box"><div class="lbl">輸入金額（'+sym+'）</div><div style="position:relative;margin-top:8px"><span style="position:absolute;left:14px;top:14px;font-family:var(--mono);font-size:22px;font-weight:800;color:rgba(255,255,255,.5)">'+sym+'</span><input id="fxIn" inputmode="decimal" placeholder="0" style="width:100%;padding:12px 14px 12px 40px;font-family:var(--mono);font-size:28px;font-weight:800;background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.2);border-radius:12px"></div><div style="text-align:center;margin:10px 0 2px;font-size:20px;color:#9BB4CC">＝</div><div style="text-align:center"><span id="fxOut" style="font-family:var(--mono);font-size:36px;font-weight:800;color:var(--gold)">'+home+' 0</span></div><div style="text-align:center;font-family:var(--mono);font-size:12px;color:#8FA6BC;margin-top:4px">匯率 1 '+home+' = '+rate+' '+t.currency+'</div></div>';
-  // quick grid
-  el.insertAdjacentHTML('beforeend','<div style="font-weight:700;font-size:13.5px;margin-bottom:8px;color:var(--ink2)">快速對照</div>');
-  const g=ce('div','qgrid');[500,1000,2000,3000,5000,10000,15000,30000].forEach(x=>{const c=ce('div','qcell');c.innerHTML='<span class="j">'+sym+x.toLocaleString()+'</span><span class="h">'+home+' '+(x/rate).toFixed(0)+'</span>';g.appendChild(c);});
-  el.appendChild(g);
-  // rate settings
-  el.insertAdjacentHTML('beforeend','<details style="margin-top:16px"><summary style="cursor:pointer;font-size:13px;color:var(--ink2);font-weight:600;padding:8px 0">⚙️ 匯率設定</summary><div class="panel" style="margin-top:8px"><div class="row"><input id="fxRateIn" inputmode="decimal" value="'+rate+'" style="flex:1;font-family:var(--mono)"><button class="addbtn" id="fxUpd" style="background:var(--gold)">更新</button></div></div></details>');
-  setTimeout(()=>{
-    const inp=$('#fxIn');if(inp)inp.oninput=()=>{const v=parseFloat(inp.value);$('#fxOut').textContent=v>0?home+' '+(v/rate).toFixed(1):home+' 0';};
-    const upd=$('#fxUpd');if(upd)upd.onclick=async()=>{const r=parseFloat($('#fxRateIn').value);if(r>0){await saveTrip({fx_rate:r});renderTab();}};
-  },0);
+  const t=currentTrip,rate=t.fx_rate||1,cur=t.currency||'JPY',home=t.home_currency||'HKD',sym=getCurrSym(cur),hsym=getCurrSym(home);
+  el.innerHTML='<div class="hero-box"><div class="lbl">輸入 '+cur+' 金額</div><div style="position:relative;margin-top:8px"><span style="position:absolute;left:14px;top:14px;font-family:var(--mono);font-size:22px;font-weight:800;color:rgba(255,255,255,.5)">'+sym+'</span><input id="fxIn" inputmode="decimal" placeholder="0" style="width:100%;padding:12px 14px 12px 44px;font-family:var(--mono);font-size:28px;font-weight:800;background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.2);border-radius:12px"></div><div style="text-align:center;margin:10px 0 2px;font-size:20px;color:#9BB4CC">＝</div><div style="text-align:center"><span id="fxOut" style="font-family:var(--mono);font-size:36px;font-weight:800;color:var(--gold)">'+hsym+'0</span></div><div style="text-align:center;font-family:var(--mono);font-size:12px;color:#8FA6BC;margin-top:4px">1 '+home+' = '+rate+' '+cur+'</div></div>';
+  const q=[500,1000,2000,3000,5000,10000,15000,30000];el.insertAdjacentHTML('beforeend','<div style="font-weight:700;font-size:13.5px;margin-bottom:8px;color:var(--ink2)">快速對照</div>');const g=ce('div','qgrid');q.forEach(x=>{const c=ce('div','qcell');c.innerHTML='<span class="j">'+sym+x.toLocaleString()+'</span><span class="h">'+hsym+(x/rate).toFixed(0)+'</span>';g.appendChild(c);});el.appendChild(g);
+  el.insertAdjacentHTML('beforeend','<details style="margin-top:16px"><summary style="cursor:pointer;font-size:13px;color:var(--ink2);font-weight:600;padding:8px 0">⚙️ 匯率 / 幣別設定</summary><div class="panel" style="margin-top:8px"><div class="field"><label>當地貨幣</label><input id="fxCur" value="'+esc(cur)+'" placeholder="JPY, EUR, THB..." style="font-family:var(--mono)"></div><div class="field"><label>匯率（1 '+home+' = ?）</label><div class="row"><input id="fxRateIn" inputmode="decimal" value="'+rate+'" style="flex:1;font-family:var(--mono)"><button class="addbtn" id="fxUpd" style="background:var(--gold)">更新</button></div></div></div></details>');
+  setTimeout(()=>{const inp=$('#fxIn');if(inp)inp.oninput=()=>{const v=parseFloat(inp.value);$('#fxOut').textContent=v>0?hsym+(v/rate).toFixed(1):hsym+'0';};
+    const upd=$('#fxUpd');if(upd)upd.onclick=async()=>{const r=parseFloat($('#fxRateIn').value),c=$('#fxCur').value.trim().toUpperCase();if(r>0){await saveTrip({fx_rate:r,currency:c||cur});renderTab();}};},0);
 }
 
-/* ===== BOOKMARKS TAB ===== */
+/* ===== BOOKMARKS TAB (full CRUD) ===== */
 function renderBookmarks(el){
   const bk=currentTrip.bookmarks||[];
+  const panel=ce('div','panel');panel.innerHTML='<h3>➕ 新增收藏</h3><input id="bkName" placeholder="名稱" style="font-size:14px;margin-bottom:8px"><input id="bkUrl" placeholder="Google Maps 連結（可空）" style="font-size:13px;margin-bottom:8px"><div class="row"><select id="bkCat" style="flex:1"></select><button class="addbtn" id="bkAddBtn">收藏</button></div>';
+  const sel=panel.querySelector('#bkCat');BK_CATS.forEach(([k,l])=>{const o=ce('option');o.value=k;o.textContent=l;sel.appendChild(o);});
+  panel.querySelector('#bkAddBtn').onclick=async()=>{const name=$('#bkName').value.trim();if(!name)return;const url=$('#bkUrl').value.trim();bk.push({cat:sel.value,name,sub:'我的收藏',mapQuery:name,url:url||null});await saveTrip({bookmarks:bk});renderTab();};
+  el.appendChild(panel);
   BK_CATS.forEach(([k,l,ic])=>{
     const items=bk.filter(b=>b.cat===k);if(!items.length)return;
     const box=ce('div','bkcat');box.innerHTML='<div class="bh"><span class="ic">'+ic+'</span>'+l+'（'+items.length+'）</div>';
-    items.forEach(b=>{const row=ce('div','bk');row.innerHTML='<div class="nm">'+esc(b.name)+(b.sub?'<small>'+esc(b.sub)+'</small>':'')+'</div><a class="go" target="_blank" href="'+gmap(b.mapQuery||b.name)+'">📍 地圖</a>';box.appendChild(row);});
-    el.appendChild(box);
-  });
-  if(!bk.length)el.innerHTML='<div class="empty">還沒有收藏。</div>';
+    items.forEach((b,bi)=>{const row=ce('div','bk');row.innerHTML='<div class="nm">'+esc(b.name)+(b.sub?'<small>'+esc(b.sub)+'</small>':'')+'</div><a class="go" target="_blank" href="'+(b.url||gmap(b.mapQuery||b.name))+'">📍 地圖</a>';
+      const del=ce('button','del');del.textContent='🗑';del.onclick=async()=>{const idx=bk.indexOf(b);if(idx>=0)bk.splice(idx,1);await saveTrip({bookmarks:bk});renderTab();};row.appendChild(del);box.appendChild(row);});
+    el.appendChild(box);});
+  if(!bk.length)el.insertAdjacentHTML('beforeend','<div class="empty">還沒有收藏。</div>');
 }
 
-/* ===== TODOS TAB ===== */
+/* ===== TODOS TAB (full CRUD) ===== */
 function renderTodos(el){
-  const todos=currentTrip.todos||[];const done=currentTrip.settings?.todoDone||{};
-  const all=todos.flatMap(s=>s.items||[]);const doneCount=all.filter((_,i)=>done[i]).length;
-  el.innerHTML='<div class="hero-box"><div style="display:flex;justify-content:space-between;align-items:center"><div class="lbl">準備進度</div><div style="font-family:var(--mono);font-weight:800;font-size:16px">'+doneCount+' / '+all.length+'</div></div><div class="prog"><div style="width:'+(all.length?doneCount/all.length*100:0)+'%"></div></div></div>';
-  let globalIdx=0;
+  const todos=currentTrip.todos||[];const st=currentTrip.settings||{};const done=st.todoDone||{};
+  const allItems=[];todos.forEach(s=>(s.items||[]).forEach((_,j)=>allItems.push(1)));
+  const doneCount=Object.keys(done).filter(k=>done[k]).length;
+  el.innerHTML='<div class="hero-box"><div style="display:flex;justify-content:space-between;align-items:center"><div class="lbl">準備進度</div><div style="font-family:var(--mono);font-weight:800;font-size:16px">'+doneCount+' / '+allItems.length+'</div></div><div class="prog"><div style="width:'+(allItems.length?doneCount/allItems.length*100:0)+'%"></div></div></div>';
+  const panel=ce('div','panel');panel.innerHTML='<h3>➕ 新增待辦</h3><input id="tdName" placeholder="待辦內容" style="font-size:14px;margin-bottom:8px"><div class="row"><select id="tdSec" style="flex:1"></select><button class="addbtn" id="tdAddBtn">新增</button></div>';
+  const sel=panel.querySelector('#tdSec');const secNames=todos.map(s=>s.section);if(!secNames.length)secNames.push('General');secNames.forEach(s=>{const o=ce('option');o.value=s;o.textContent=s;sel.appendChild(o);});
+  panel.querySelector('#tdAddBtn').onclick=async()=>{const txt=$('#tdName').value.trim();if(!txt)return;const sec=sel.value;let found=todos.find(s=>s.section===sec);if(!found){found={section:sec,items:[]};todos.push(found);}found.items.push(txt);await saveTrip({todos});renderTab();};
+  el.appendChild(panel);
+  let gi=0;
   todos.forEach(sec=>{
     const box=ce('div','phase');box.innerHTML='<div class="ph"><span class="ic">📋</span>'+esc(sec.section)+'</div>';
-    (sec.items||[]).forEach(item=>{
-      const idx=globalIdx++;const on=!!done[idx];
-      const row=ce('div','chk'+(on?' on':''));
-      const bx=ce('span','box');bx.textContent=on?'✓':'';
-      bx.onclick=async()=>{const d={...done};d[idx]=!d[idx];const s={...currentTrip.settings,todoDone:d};await saveTrip({settings:s});renderTab();};
+    (sec.items||[]).forEach((item,j)=>{
+      const idx=gi++;const on=!!done[idx];const row=ce('div','chk'+(on?' on':''));
+      const bx=ce('span','box');bx.textContent=on?'✓':'';bx.onclick=async()=>{done[idx]=!done[idx];const s={...st,todoDone:done};await saveTrip({settings:s});renderTab();};
       const lab=ce('span','lab');lab.textContent=item;
-      row.appendChild(bx);row.appendChild(lab);box.appendChild(row);
+      const dl=ce('button','mini');dl.textContent='🗑';dl.onclick=async()=>{sec.items.splice(j,1);delete done[idx];const s={...st,todoDone:done};await saveTrip({todos,settings:s});renderTab();};
+      row.appendChild(bx);row.appendChild(lab);row.appendChild(dl);box.appendChild(row);
     });
     el.appendChild(box);
   });
 }
 
-/* ===== INFO TAB ===== */
+/* ===== INFO TAB (editable fields) ===== */
 function renderInfoTab(el){
-  const s=currentTrip.settings||{};
+  const t=currentTrip,s=t.settings||{},iv=t.info_vault||{};
+  const fields=[['flight','✈️ 航班'],['hotel_confirm','🏨 飯店確認碼'],['transport','🚄 交通票券'],['insurance','🛡️ 旅平險'],['contacts','📞 緊急聯絡人'],['notes','📝 其他備註']];
+  const panel=ce('div','panel');panel.innerHTML='<div style="font-weight:800;font-size:14px;margin-bottom:10px">🎫 訂位 / 確認資訊</div>';
+  fields.forEach(([k,l])=>{const d=ce('div','field');d.innerHTML='<label>'+l+'</label>';const inp=ce('input');inp.value=iv[k]||'';inp.placeholder='填入…';let st;inp.oninput=()=>{clearTimeout(st);st=setTimeout(()=>{iv[k]=inp.value;saveTrip({info_vault:iv});},800);};d.appendChild(inp);panel.appendChild(d);});
+  el.appendChild(panel);
   // Phrases
   const phrases=s.phrases||[];
-  if(phrases.length){
-    const panel=ce('div','panel');panel.innerHTML='<div style="font-weight:800;font-size:14px;margin-bottom:10px">🗣️ 實用語句</div>';
-    phrases.forEach(cat=>{panel.insertAdjacentHTML('beforeend','<div style="font-weight:800;font-size:13px;margin:14px 0 7px;color:var(--ink)">'+esc(cat.cat)+'</div>');
-      (cat.items||[]).forEach(([zh,local,rm])=>{const d=ce('div','phrase');d.innerHTML='<div style="flex:1;min-width:0"><span>'+esc(zh)+'</span>'+(rm?'<div style="font-family:var(--mono);font-size:10.5px;color:#9AA6AF;margin-top:2px">'+esc(rm)+'</div>':'')+'</div><span class="jp">'+esc(local)+'</span>';panel.appendChild(d);});
-    });
-    el.appendChild(panel);
-  }
+  if(phrases.length){const pp=ce('div','panel');pp.innerHTML='<div style="font-weight:800;font-size:14px;margin-bottom:10px">🗣️ 實用語句</div>';
+    phrases.forEach(cat=>{pp.insertAdjacentHTML('beforeend','<div style="font-weight:800;font-size:13px;margin:14px 0 7px;color:var(--ink)">'+esc(cat.cat)+'</div>');
+      (cat.items||[]).forEach(([zh,local,rm])=>{const d=ce('div','phrase');d.innerHTML='<div style="flex:1;min-width:0"><span>'+esc(zh)+'</span>'+(rm?'<div style="font-family:var(--mono);font-size:10.5px;color:#9AA6AF;margin-top:2px">'+esc(rm)+'</div>':'')+'</div><span class="jp">'+esc(local)+'</span>';pp.appendChild(d);});});
+    el.appendChild(pp);}
   // Emergency
   const em=s.emergency||{};
-  if(em.police||em.ambulance){
-    const panel=ce('div','panel');panel.innerHTML='<div style="font-weight:800;font-size:14px;margin-bottom:10px">🆘 緊急資訊</div>';
-    if(em.police)panel.insertAdjacentHTML('beforeend','<div class="emc"><b>警察</b> '+esc(em.police)+'</div>');
-    if(em.ambulance)panel.insertAdjacentHTML('beforeend','<div class="emc"><b>救護/消防</b> '+esc(em.ambulance)+'</div>');
-    if(em.embassy)panel.insertAdjacentHTML('beforeend','<div class="emc"><b>大使館/領事館</b> '+esc(em.embassy)+'</div>');
-    if(em.tips)(em.tips).forEach(t=>panel.insertAdjacentHTML('beforeend','<div class="emc">💡 '+esc(t)+'</div>'));
-    el.appendChild(panel);
-  }
+  if(em.police||em.ambulance||em.embassy){const ep=ce('div','panel');ep.innerHTML='<div style="font-weight:800;font-size:14px;margin-bottom:10px">🆘 緊急資訊</div>';
+    if(em.police)ep.insertAdjacentHTML('beforeend','<div class="emc"><b>警察</b> '+esc(em.police)+'</div>');
+    if(em.ambulance)ep.insertAdjacentHTML('beforeend','<div class="emc"><b>救護</b> '+esc(em.ambulance)+'</div>');
+    if(em.embassy)ep.insertAdjacentHTML('beforeend','<div class="emc"><b>大使館</b> '+esc(em.embassy)+'</div>');
+    if(em.tips)(em.tips).forEach(t=>ep.insertAdjacentHTML('beforeend','<div class="emc">💡 '+esc(t)+'</div>'));
+    el.appendChild(ep);}
 }
 
 function copyShare(){$('#shareUrl').select();navigator.clipboard.writeText($('#shareUrl').value);$('#shareUrl').nextElementSibling.textContent='已複製！';setTimeout(()=>$('#shareUrl').nextElementSibling.textContent='複製連結',2000);}
@@ -746,6 +779,5 @@ let authInProgress=false;
 sb.auth.onAuthStateChange((event,session)=>{if(event==='SIGNED_IN'&&session&&!authInProgress){user=session.user;showDashboard();}});
 checkAuth();
 </script>
-
 </body>
 </html>
