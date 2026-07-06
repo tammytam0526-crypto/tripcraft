@@ -20,7 +20,7 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;border:none;border-radius:12px;font-family:inherit;font-weight:700;font-size:15px;padding:12px 24px;transition:transform .1s}
 .btn:active{transform:scale(.97)}
 .btn-primary{background:#5B3A28;color:#fff}
-.btn-dark{background:var(--ink);color:#fff}
+.btn-dark{background:#3C2415;color:#fff}
 .btn-outline{background:transparent;border:1.5px solid var(--line);color:var(--ink)}
 .btn-gold{background:var(--gold);color:#fff}
 .btn-sm{padding:8px 16px;font-size:13px;border-radius:9px}
@@ -72,14 +72,14 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-off
 .trip-card .tc-meta span{display:flex;align-items:center;gap:4px}
 .trip-card .tc-actions{display:flex;gap:8px;margin-top:14px}
 .create-card{background:transparent;border:2px dashed var(--line);border-radius:16px;padding:32px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;color:var(--ink2);font-weight:700;font-size:15px;transition:border-color .15s}
-.create-card:hover{border-color:var(--red);color:var(--red)}
+.create-card:hover{border-color:var(--gold);color:#5B3A28}
 .create-card .cc-icon{font-size:32px}
 /* ---- wizard ---- */
 
-.wiz-head{background:var(--navy);color:#fff;padding:14px 20px;display:flex;align-items:center;gap:12px}
+.wiz-head{background:#3C2415;color:#fff;padding:14px 20px;display:flex;align-items:center;gap:12px}
 .wiz-head .back{cursor:pointer;font-size:20px;background:none;border:none;color:#C9D8E6;padding:4px}
 .wiz-head h2{font-size:17px;font-weight:800;color:#fff}
-.wiz-progress{height:4px;background:#1F3B56;margin-bottom:24px}.wiz-progress>div{height:100%;background:var(--red);border-radius:2px;transition:width .3s}
+.wiz-progress{height:4px;background:#1F3B56;margin-bottom:24px}.wiz-progress>div{height:100%;background:var(--gold);border-radius:2px;transition:width .3s}
 .wiz-body{padding:0 20px;max-width:520px;margin:0 auto}
 .wiz-q{font-size:20px;font-weight:800;margin-bottom:6px}
 .wiz-sub{font-size:13.5px;color:var(--ink2);margin-bottom:20px;line-height:1.5}
@@ -97,7 +97,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-off
 .hotel-entry{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px}
 .hotel-entry .row{display:flex;gap:8px}.hotel-entry input{font-size:13px;padding:9px 10px}
 /* ---- generating ---- */
-.gen-spinner{width:60px;height:60px;border:4px solid var(--line);border-top-color:var(--red);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 20px}
+.gen-spinner{width:60px;height:60px;border:4px solid var(--line);border-top-color:var(--gold);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 20px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .gen-text{font-size:18px;font-weight:700}.gen-sub{font-size:14px;color:var(--ink2);margin-top:8px;line-height:1.6}
 .gen-steps{margin-top:24px;text-align:left;max-width:340px}
@@ -105,29 +105,30 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-off
 .gen-step.done{color:var(--matcha);font-weight:600}
 .gen-step .gs-icon{width:24px;text-align:center;font-size:16px}
 /* ---- trip view (reuses most styles from original app) ---- */
-.tv-head{background:var(--navy);color:#fff;padding:16px 18px}
+.tv-head{background:#3C2415;color:#fff;padding:16px 18px}
 .tv-head .tv-top{display:flex;justify-content:space-between;align-items:flex-start}
 .tv-head .back{cursor:pointer;font-size:18px;background:none;border:none;color:#C9D8E6;padding:4px;margin-right:8px}
 .tv-head .tv-title{font-size:20px;font-weight:800;margin-top:2px}
 .tv-head .tv-meta{display:flex;gap:12px;margin-top:8px;font-family:var(--mono);font-size:11px;color:#C9D8E6;flex-wrap:wrap}
 .tv-share{display:flex;align-items:center;gap:6px;margin-top:10px}
+.share-btn-sm{cursor:pointer;background:var(--gold);color:#fff;border:none;border-radius:8px;padding:6px 10px;font-size:14px;font-family:inherit}
 .share-btn{cursor:pointer;background:var(--gold);color:#fff;border:none;border-radius:10px;padding:8px 16px;font-weight:700;font-size:13px;font-family:inherit}
 .tv-share input{flex:1;font-size:11px;padding:6px 8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:7px}
 .tv-share button{background:var(--gold);color:#fff;border:none;border-radius:7px;padding:6px 12px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit}
 nav.tabs{display:flex;position:sticky;top:0;z-index:30;background:var(--card);border-bottom:1px solid var(--line);box-shadow:0 1px 6px rgba(0,0,0,.05)}
 nav.tabs button{flex:1;border:none;background:none;padding:9px 0 7px;cursor:pointer;border-bottom:3px solid transparent;color:#9AA6AF;font-weight:500;font-size:10.5px;display:flex;flex-direction:column;align-items:center;gap:2px;font-family:inherit}
 nav.tabs button .ic{font-size:17px;line-height:1}
-nav.tabs button.on{color:var(--ink);font-weight:800;border-bottom-color:var(--red)}
+nav.tabs button.on{color:var(--ink);font-weight:800;border-bottom-color:#5B3A28}
 .tv-main{padding:16px 14px;max-width:680px;margin:0 auto}
 section{display:none}section.on{display:block}
 /* timeline styles */
 .chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:14px}
 .chip{flex:0 0 auto;cursor:pointer;padding:8px 12px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink2);text-align:center;min-width:64px}
 .chip .d{font-family:var(--mono);font-weight:800;font-size:15px}.chip .w{font-size:10.5px;opacity:.8;margin-top:2px}
-.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
-.dayhead{background:var(--ink);color:#fff;border-radius:14px;padding:14px 16px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.chip.on{background:#5B3A28;color:#fff;border-color:#5B3A28}
+.dayhead{background:#3C2415;color:#fff;border-radius:14px;padding:14px 16px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:10px}
 .dayhead .k{font-family:var(--mono);font-size:12px;color:#9BB4CC;letter-spacing:1px}.dayhead .c{font-size:19px;font-weight:800;margin-top:3px}
-.dayhead .tag{background:var(--red);font-size:12px;font-weight:700;padding:5px 11px;border-radius:20px;white-space:nowrap}
+.dayhead .tag{background:var(--gold);font-size:12px;font-weight:700;padding:5px 11px;border-radius:20px;white-space:nowrap}
 .transit{background:#EEF3F7;border:1px solid #DCE6EE;border-radius:10px;padding:9px 12px;margin-bottom:10px;font-size:12.5px;color:var(--ink2);line-height:1.5}
 .navall{width:100%;cursor:pointer;background:var(--matcha);color:#fff;border:none;border-radius:10px;padding:10px;font-weight:700;font-size:13px;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;margin-bottom:12px}
 .item{display:flex;gap:11px}
@@ -151,10 +152,10 @@ section{display:none}section.on{display:block}
 .altlink .s{font-family:var(--mono);color:var(--gold);font-size:10.5px}
 .btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .mapbtn,.dirbtn{display:inline-flex;align-items:center;gap:5px;font-size:12px;text-decoration:none;padding:5px 10px;border-radius:8px;font-weight:600}
-.mapbtn{color:#fff;background:var(--ink)}.dirbtn{color:#fff;background:var(--matcha)}
+.mapbtn{color:#fff;background:#5B3A28}.dirbtn{color:#fff;background:var(--matcha)}
 .recgo{display:inline-flex;align-items:center;gap:5px;font-size:12px;text-decoration:none;padding:5px 10px;border-radius:8px;font-weight:600;color:#fff;background:var(--gold);margin-top:8px}
 /* shared panel styles */
-.hero-box{background:var(--ink);color:#fff;border-radius:14px;padding:16px 18px;margin-bottom:16px}
+.hero-box{background:#3C2415;color:#fff;border-radius:14px;padding:16px 18px;margin-bottom:16px}
 .hero-box .lbl{font-size:12px;color:#9BB4CC;letter-spacing:1px}
 .hero-box .big{font-family:var(--mono);font-size:30px;font-weight:800;margin-top:2px}
 .hero-box .sub{font-family:var(--mono);font-size:14px;color:var(--gold);margin-top:2px}
@@ -172,11 +173,11 @@ section{display:none}section.on{display:block}
 .qcell{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:11px 13px;display:flex;justify-content:space-between;align-items:center}
 .qcell .j{font-family:var(--mono);font-weight:700;font-size:14px}.qcell .h{font-family:var(--mono);color:var(--gold);font-weight:700;font-size:13px}
 .bkcat{margin-bottom:16px}.bkcat .bh{display:flex;align-items:center;gap:7px;font-weight:800;font-size:14px;margin-bottom:9px}
-.bkcat .bh .ic,.phase .ph .ic{width:26px;height:26px;border-radius:8px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px}
+.bkcat .bh .ic,.phase .ph .ic{width:26px;height:26px;border-radius:8px;background:#5B3A28;color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px}
 .bk{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px 12px;margin-bottom:8px}
 .bk .nm{flex:1;font-size:13.5px;font-weight:600;min-width:0}.bk .nm small{display:block;color:#9AA6AF;font-weight:400;font-size:11px;margin-top:2px}
 .bk .go{flex:0 0 auto;font-size:12px;color:#fff;background:var(--ink);text-decoration:none;padding:5px 10px;border-radius:8px;font-weight:600}
-.prog{height:8px;background:#1F3B56;border-radius:20px;margin-top:10px;overflow:hidden}.prog>div{height:100%;background:var(--matcha);border-radius:20px;transition:width .3s}
+.prog{height:8px;background:#5B3A28;border-radius:20px;margin-top:10px;overflow:hidden}.prog>div{height:100%;background:var(--matcha);border-radius:20px;transition:width .3s}
 .phase{margin-bottom:18px}.phase .ph{display:flex;align-items:center;gap:7px;font-weight:800;font-size:14px;margin-bottom:9px}
 .chk{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px 12px;margin-bottom:8px}
 .chk .box{cursor:pointer;flex:0 0 auto;width:22px;height:22px;border-radius:7px;border:1.5px solid #CBD2C4;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px}
@@ -249,7 +250,7 @@ section{display:none}section.on{display:block}
     </div>
   </div>
   <div class="wrap">
-    <h2 style="margin:24px 0 16px;font-size:22px">我的旅程</h2>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin:24px 0 16px"><h2 style="font-size:22px;margin:0">我的旅程</h2><button class="btn btn-sm" style="background:#5B3A28;color:#fff;border:none" onclick="startWizard()">＋ 新旅程</button></div>
     <div class="trip-grid" id="tripGrid"></div>
   </div>
 </div>
@@ -277,10 +278,10 @@ section{display:none}section.on{display:block}
   <div class="tv-head">
     <div class="tv-top">
       <div style="display:flex;align-items:center"><button class="back" onclick="showDashboard()">←</button><div><div style="font-family:var(--mono);font-size:11px;color:#9BB4CC;letter-spacing:2px" id="tvDest"></div><div class="tv-title" id="tvTitle"></div></div></div>
-      <button onclick="cycleLang()" class="lang-btn" style="background:rgba(255,255,255,.12);color:#D4B896;border-color:rgba(255,255,255,.2)">EN</button>
+      <div style="display:flex;gap:6px;align-items:center"><button class="share-btn-sm" onclick="copyShare()">🔗</button><span id="shareMsg" style="font-size:10px;color:var(--gold)"></span><button onclick="cycleLang()" class="lang-btn" style="background:rgba(255,255,255,.12);color:#D4B896;border-color:rgba(255,255,255,.2)">EN</button></div>
     </div>
     <div class="tv-meta" id="tvMeta"></div>
-    <div class="tv-share"><button class="share-btn" onclick="copyShare()">🔗 分享旅程</button><span id="shareMsg" style="font-size:12px;color:var(--gold);margin-left:8px"></span></div>
+    
   </div>
   <nav class="tabs" id="tvTabs"></nav>
   <div class="tv-main" id="tvMain"></div>
@@ -300,8 +301,8 @@ const gmap=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURICompon
 const dirUrl=(f,t,m)=>'https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(f)+'&destination='+encodeURIComponent(t)+'&travelmode='+(m||'transit');
 const navUrl=(stops,mode)=>{const s=[...stops],o=s.shift(),d=s.pop();let u='https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(o)+'&destination='+encodeURIComponent(d)+'&travelmode='+(mode||'transit');if(s.length)u+='&waypoints='+s.map(encodeURIComponent).join('%7C');return u;};
 const yen=(n,sym)=>(sym||'¥')+Math.round(n).toLocaleString();
-const TYPE={move:{i:'🚃',c:'#3D5A75',l:'Transport'},eat:{i:'🍜',c:'#C98A28',l:'Food'},see:{i:'📸',c:'#6E8B57',l:'Sight'},shop:{i:'🛍️',c:'#B0568C',l:'Shop'},stay:{i:'🏨',c:'#16324F',l:'Hotel'},play:{i:'🎟️',c:'#E24A34',l:'Activity'},coffee:{i:'☕',c:'#9A6B3F',l:'Breakfast'},shrine:{i:'⛩️',c:'#C0392B',l:'Temple'},view:{i:'🌆',c:'#7A5EA8',l:'View'}};
-const CATS=[['food','Dining','#C98A28'],['transit','Transport','#3D5A75'],['shop','Shopping','#B0568C'],['ticket','Tickets','#E24A34'],['stay','Hotel','#16324F'],['other','Other','#6E8B57']];
+const TYPE={move:{i:'🚃',c:'#7B6145',l:'Transport'},eat:{i:'🍜',c:'#C98A28',l:'Food'},see:{i:'📸',c:'#6E8B57',l:'Sight'},shop:{i:'🛍️',c:'#B0568C',l:'Shop'},stay:{i:'🏨',c:'#3C2415',l:'Hotel'},play:{i:'🎟️',c:'#E24A34',l:'Activity'},coffee:{i:'☕',c:'#9A6B3F',l:'Breakfast'},shrine:{i:'⛩️',c:'#C0392B',l:'Temple'},view:{i:'🌆',c:'#7A5EA8',l:'View'}};
+const CATS=[['food','Dining','#C98A28'],['transit','Transport','#7B6145'],['shop','Shopping','#B0568C'],['ticket','Tickets','#E24A34'],['stay','Hotel','#3C2415'],['other','Other','#6E8B57']];
 const BK_CATS=[['food','Restaurants','🍜'],['cafe','Cafes','☕'],['shop','Shopping','🛍️'],['see','Sights','📸'],['stay','Hotels','🏨']];
 
 let user=null, trips=[], currentTrip=null, curDay=0, curCat='food', curTab='plan';
@@ -405,7 +406,7 @@ function renderTripGrid(){
     const de=t.date_end?new Date(t.date_end).toLocaleDateString('zh-TW',{month:'short',day:'numeric'}):'';
     c.innerHTML='<div class="tc-top"><div><div class="tc-dest">'+esc(t.destination||'')+'</div><h3>'+esc(t.title)+'</h3></div></div>'+
       '<div class="tc-meta"><span>📅 '+(ds&&de?ds+'–'+de:'未設定')+'</span><span>👥 '+t.people_count+'人</span></div>'+
-      '<div class="tc-actions"><button class="btn btn-dark btn-sm" data-id="'+t.id+'">開啟</button><button class="btn btn-outline btn-sm" data-share="'+t.share_token+'">🔗 分享</button><button class="btn btn-outline btn-sm" data-del="'+t.id+'" style="color:var(--red)">🗑</button></div>';
+      '<div class="tc-actions"><button class="btn btn-sm" style="background:#3C2415;color:#fff" data-id="'+t.id+'">開啟</button><button class="btn btn-outline btn-sm" data-share="'+t.share_token+'">🔗 分享</button><button class="btn btn-outline btn-sm" data-del="'+t.id+'" style="color:var(--red)">🗑</button></div>';
     c.querySelector('[data-id]').onclick=()=>openTrip(t.id);
     c.querySelector('[data-share]').onclick=e=>{e.stopPropagation();const url=window.location.origin+window.location.pathname+'?share='+t.share_token;navigator.clipboard.writeText(url).then(()=>alert('連結已複製！'));};
     c.querySelector('[data-del]').onclick=async e=>{e.stopPropagation();if(confirm('確定刪除「'+t.title+'」？')){await sb.from('trips').delete().eq('id',t.id);await showDashboard();}};
@@ -704,7 +705,7 @@ function svgPie(data){const cx=50,cy=50,r=38,ri=20;let s='';const tot=data.reduc
 /* ===== FX TAB (dynamic currencies) ===== */
 function renderFx(el){
   const t=currentTrip,rate=t.fx_rate||1,cur=t.currency||'JPY',home=t.home_currency||'HKD',sym=getCurrSym(cur),hsym=getCurrSym(home);
-  el.innerHTML='<div class="hero-box"><div class="lbl">輸入 '+cur+' 金額</div><div style="position:relative;margin-top:8px"><span style="position:absolute;left:14px;top:14px;font-family:var(--mono);font-size:22px;font-weight:800;color:rgba(255,255,255,.5)">'+sym+'</span><input id="fxIn" inputmode="decimal" placeholder="0" style="width:100%;padding:12px 14px 12px 44px;font-family:var(--mono);font-size:28px;font-weight:800;background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.2);border-radius:12px"></div><div style="text-align:center;margin:10px 0 2px;font-size:20px;color:#9BB4CC">＝</div><div style="text-align:center"><span id="fxOut" style="font-family:var(--mono);font-size:36px;font-weight:800;color:var(--gold)">'+hsym+'0</span></div><div style="text-align:center;font-family:var(--mono);font-size:12px;color:#8FA6BC;margin-top:4px">1 '+home+' = '+rate+' '+cur+'</div></div>';
+  el.innerHTML='<div class="hero-box"><div class="lbl">輸入 '+cur+' 金額</div><div style="position:relative;margin-top:8px"><span style="position:absolute;left:14px;top:14px;font-family:var(--mono);font-size:18px;font-weight:800;color:rgba(255,255,255,.4)">'+sym+'</span><input id="fxIn" inputmode="decimal" placeholder="0" style="width:100%;padding:12px 14px 12px 54px;font-family:var(--mono);font-size:28px;font-weight:800;background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.2);border-radius:12px"></div><div style="text-align:center;margin:10px 0 2px;font-size:20px;color:#9BB4CC">＝</div><div style="text-align:center"><span id="fxOut" style="font-family:var(--mono);font-size:36px;font-weight:800;color:var(--gold)">'+hsym+'0</span></div><div style="text-align:center;font-family:var(--mono);font-size:12px;color:#8FA6BC;margin-top:4px">1 '+home+' = '+rate+' '+cur+'</div></div>';
   const q=[500,1000,2000,3000,5000,10000,15000,30000];el.insertAdjacentHTML('beforeend','<div style="font-weight:700;font-size:13.5px;margin-bottom:8px;color:var(--ink2)">快速對照</div>');const g=ce('div','qgrid');q.forEach(x=>{const c=ce('div','qcell');c.innerHTML='<span class="j">'+sym+x.toLocaleString()+'</span><span class="h">'+hsym+(x/rate).toFixed(0)+'</span>';g.appendChild(c);});el.appendChild(g);
   el.insertAdjacentHTML('beforeend','<details style="margin-top:16px"><summary style="cursor:pointer;font-size:13px;color:var(--ink2);font-weight:600;padding:8px 0">⚙️ 匯率 / 幣別設定</summary><div class="panel" style="margin-top:8px"><div class="field"><label>當地貨幣</label><input id="fxCur" value="'+esc(cur)+'" placeholder="JPY, EUR, THB..." style="font-family:var(--mono)"></div><div class="field"><label>匯率（1 '+home+' = ?）</label><div class="row"><input id="fxRateIn" inputmode="decimal" value="'+rate+'" style="flex:1;font-family:var(--mono)"><button class="addbtn" id="fxUpd" style="background:var(--gold)">更新</button></div></div></div></details>');
   setTimeout(()=>{const inp=$('#fxIn');if(inp)inp.oninput=()=>{const v=parseFloat(inp.value);$('#fxOut').textContent=v>0?hsym+(v/rate).toFixed(1):hsym+'0';};
