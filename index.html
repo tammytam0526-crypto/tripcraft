@@ -31,6 +31,10 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-off
 .field label{display:block;font-size:13px;font-weight:700;color:var(--ink2);margin-bottom:6px}
 /* ---- landing ---- */
 #landing{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;max-width:430px;margin:0 auto}
+#dashboard{display:none;min-height:100vh;padding-bottom:40px}
+#wizard{display:none;min-height:100vh}
+#generating{display:none;min-height:100vh;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px}
+#tripview{display:none;padding-bottom:96px}
 .land-top{background:linear-gradient(145deg,#12293F 0%,#1A3A5C 50%,#243B53 100%);color:#fff;padding:16px 22px 28px;text-align:center;position:relative;overflow:hidden;border-radius:0 0 24px 24px}
 .land-topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
 .land-brand{font-family:var(--mono);font-size:13px;letter-spacing:3px;color:#9BB4CC}
@@ -53,7 +57,6 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-off
 .lf p{font-size:12.5px;color:var(--ink2);line-height:1.5;margin:0}
 .footer{text-align:center;padding:16px 20px 32px;font-size:11px;color:#9AA6AF}
 /* ---- dashboard ---- */
-#dashboard{display:none;min-height:100vh;padding-bottom:40px}
 .dash-head{background:var(--navy);color:#fff;padding:20px;display:flex;justify-content:space-between;align-items:center}
 .dash-head .logo{font-weight:900;font-size:18px;letter-spacing:-0.5px}.dash-head .logo span{color:var(--gold)}
 .dash-user{display:flex;align-items:center;gap:10px;font-size:13px}
@@ -72,7 +75,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-off
 .create-card:hover{border-color:var(--red);color:var(--red)}
 .create-card .cc-icon{font-size:32px}
 /* ---- wizard ---- */
-#wizard{display:none;min-height:100vh}
+
 .wiz-head{background:var(--navy);color:#fff;padding:16px 20px;display:flex;align-items:center;gap:12px}
 .wiz-head .back{cursor:pointer;font-size:20px;background:none;border:none;color:#C9D8E6;padding:4px}
 .wiz-head h2{font-size:17px;font-weight:800}
@@ -88,7 +91,6 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-off
 .hotel-entry{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px}
 .hotel-entry .row{display:flex;gap:8px}.hotel-entry input{font-size:13px;padding:9px 10px}
 /* ---- generating ---- */
-#generating{display:none;min-height:100vh;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px}
 .gen-spinner{width:60px;height:60px;border:4px solid var(--line);border-top-color:var(--red);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 20px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .gen-text{font-size:18px;font-weight:700}.gen-sub{font-size:14px;color:var(--ink2);margin-top:8px;line-height:1.6}
@@ -97,7 +99,6 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-off
 .gen-step.done{color:var(--matcha);font-weight:600}
 .gen-step .gs-icon{width:24px;text-align:center;font-size:16px}
 /* ---- trip view (reuses most styles from original app) ---- */
-#tripview{display:none;padding-bottom:96px}
 .tv-head{background:var(--navy);color:#fff;padding:14px 16px}
 .tv-head .tv-top{display:flex;justify-content:space-between;align-items:flex-start}
 .tv-head .back{cursor:pointer;font-size:18px;background:none;border:none;color:#C9D8E6;padding:4px;margin-right:8px}
@@ -290,7 +291,7 @@ const BK_CATS=[['food','Restaurants','🍜'],['cafe','Cafes','☕'],['shop','Sho
 let user=null, trips=[], currentTrip=null, curDay=0, curCat='food', curTab='plan';
 
 /* ===== VIEWS ===== */
-function showView(id){['landing','dashboard','wizard','generating','tripview'].forEach(v=>document.getElementById(v).style.display='none');document.getElementById(id).style.display=id==='generating'?'flex':'';}
+function showView(id){['landing','dashboard','wizard','generating','tripview'].forEach(v=>document.getElementById(v).style.display='none');document.getElementById(id).style.display=id==='generating'?'flex':'block';}
 
 /* ===== LANG TOGGLE ===== */
 const LANGS=['zh-TW','zh-CN','en'];
@@ -330,6 +331,7 @@ async function doAuth(){
   if(!email||!pw){err.textContent='請填寫 Email 和密碼';return;}
   if(pw.length<6){err.textContent='密碼至少 6 位';return;}
   btn.disabled=true;btn.textContent='處理中...';
+  authInProgress=true;
   try{
     if(authMode==='signup'){
       const{data,error}=await sb.auth.signUp({email,password:pw});
@@ -350,7 +352,7 @@ async function doAuth(){
     else if(msg.includes('Email not confirmed'))err.textContent='請先到信箱確認 Email';
     else err.textContent=msg||'發生錯誤，請重試';
   }
-  btn.textContent=authMode==='login'?'登入':'註冊';btn.disabled=false;
+  btn.textContent=authMode==='login'?t.login||'登入':t.signup||'註冊';btn.disabled=false;authInProgress=false;
 }
 async function logout(){await sb.auth.signOut();user=null;showView('landing');}
 
@@ -681,7 +683,8 @@ function copyShare(){$('#shareUrl').select();navigator.clipboard.writeText($('#s
 
 /* ===== INIT ===== */
 try{const sl=localStorage.getItem('tc-lang');if(sl&&LANGS.includes(sl)){curLang=sl;applyLang();}}catch(e){}
-sb.auth.onAuthStateChange((event,session)=>{if(event==='SIGNED_IN'&&session){user=session.user;showDashboard();}});
+let authInProgress=false;
+sb.auth.onAuthStateChange((event,session)=>{if(event==='SIGNED_IN'&&session&&!authInProgress){user=session.user;showDashboard();}});
 checkAuth();
 </script>
 </body>
